@@ -1,0 +1,33 @@
+
+
+int x = 1;
+int LED = 8;
+int y;
+void setup()
+{
+    pinMode(y,OUTPUT);
+    pinMode(x,OUTPUT);
+     while (x < 4){
+       // Turn on each LED in sequence
+       for (int y = 0; y < 256;y++){
+        analogWrite (6,y);
+        delay (4);
+    }
+        analogWrite ((LED+x),255);
+        delay(2000);
+      
+    
+    // Fade LED from full power to 0 over one second
+    for(int y = 255; y >= 0;y--){
+        analogWrite (6,y);
+        delay(4);
+    }
+       x++;
+          }
+    
+}
+
+void loop()
+{
+
+}
